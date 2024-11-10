@@ -1,0 +1,19 @@
+//
+//  <#FeatureClass#>Tests.swift
+//
+//  Created on <#CreatedAt#>.
+//
+
+import Quick
+import Nimble
+
+class <#FeatureClass#>Tests: QuickSpec {
+
+    override class func spec() {
+
+        describe("<#Feature#>") {
+
+            <#Scenarios#>
+        }
+    }
+}

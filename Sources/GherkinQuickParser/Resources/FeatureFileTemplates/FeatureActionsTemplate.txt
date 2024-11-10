@@ -1,0 +1,13 @@
+//
+//  <#FeatureClass#>Tests+Actions.swift
+//
+//  Created on <#CreatedAt#>.
+//
+
+import Quick
+import Nimble
+
+extension <#FeatureClass#>Tests {
+
+    <#Actions#>
+}
