@@ -17,11 +17,19 @@ extension LoginDeUsuárioTests {
         fail("To do")
     }
 
+    class func andEleInsereUmaSenhaVálida() {
+        fail("To do")
+    }
+
     class func thenDeveVerATelaInicial() {
         fail("To do")
     }
 
     class func whenEleInsereUmEmailInválido() {
+        fail("To do")
+    }
+
+    class func andInsereUmaSenhaInválida() {
         fail("To do")
     }
 

@@ -17,7 +17,7 @@ struct Scenario {
 
 enum StepType: String, CaseIterable {
 
-    case given, when, then
+    case given, when, then, and, but
 
     init?(rawValue: String) {
         guard let type = Self.allCases.first(where: { type in type.rawValue.localizedCaseInsensitiveContains(rawValue) }) else {

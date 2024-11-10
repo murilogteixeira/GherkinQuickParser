@@ -108,8 +108,8 @@ struct GherkinQuickParser {
             var scenarioCode = scenarioTemplate
             scenarioCode = scenarioCode.replacingOccurrences(of: "<#Scenario#>", with: scenario.name.capitalized)
 
-            let thenStep = scenario.steps.first(where: { $0.type == .then })
-            scenarioCode = scenarioCode.replacingOccurrences(of: "<#Then#>", with: thenStep?.description.capitalized ?? scenario.name.capitalized)
+            let thenSteps = scenario.steps.filter({ $0.type == .then }).map(\.description.capitalized).joined(separator: ",")
+            scenarioCode = scenarioCode.replacingOccurrences(of: "<#Then#>", with: thenSteps /*?? scenario.name.capitalized*/)
 
             var stepsCode: [String] = []
 

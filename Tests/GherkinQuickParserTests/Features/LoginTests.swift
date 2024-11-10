@@ -17,6 +17,7 @@ class LoginDeUsuárioTests: QuickSpec {
                 it("Deve Ver A Tela Inicial") {
                     givenUsuárioEstáNaTelaDeLogin()
                     whenEleInsereUmEmailVálido()
+                    andEleInsereUmaSenhaVálida()
                     thenDeveVerATelaInicial()
                 }
             }
@@ -25,6 +26,7 @@ class LoginDeUsuárioTests: QuickSpec {
                 it("Deve Ver Uma Mensagem De Erro") {
                     givenUsuárioEstáNaTelaDeLogin()
                     whenEleInsereUmEmailInválido()
+                    andInsereUmaSenhaInválida()
                     thenDeveVerUmaMensagemDeErro()
                 }
             }
