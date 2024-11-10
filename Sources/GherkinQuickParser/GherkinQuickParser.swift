@@ -123,43 +123,6 @@ struct GherkinQuickParser {
 
         featureTemplateCode = featureTemplateCode.replacingOccurrences(of: "<#Scenarios#>", with: scenariosCode.joined(separator: "\n            "))
         return featureTemplateCode
-
-//        var code = "import Quick\nimport Nimble\n\n"
-//        code += "class \(feature.name.capitalized.replacingOccurrences(of: " ", with: ""))Tests: QuickSpec {\n"
-//        code += "    override class func spec() {\n"
-//
-//        code += "        describe(\"\(feature.name.capitalized)\") {\n"
-//
-//        for scenario in feature.scenarios {
-//            let thenStep = scenario.steps.first(where: { $0.type == .then })
-//
-//            code += "            context(\"\(scenario.name.capitalized)\") {\n"
-//            code += "                it(\"\(thenStep?.description.capitalized ?? scenario.name.capitalized)\") {\n"
-//
-//            for step in scenario.steps {
-//                let methodCall: String
-//
-//                switch step.type {
-//                case .given:
-//                    methodCall = "given\(step.description.capitalized.replacingOccurrences(of: " ", with: ""))"
-//                case .when:
-//                    methodCall = "when\(step.description.capitalized.replacingOccurrences(of: " ", with: ""))"
-//                case .then:
-//                    methodCall = "then\(step.description.capitalized.replacingOccurrences(of: " ", with: ""))"
-//                }
-//
-//                code += "                    \(methodCall)()\n"
-//            }
-//
-//            code += "                }\n"
-//            code += "            }\n"
-//        }
-//
-//        code += "        }\n"
-//        code += "    }\n"
-//        code += "}\n"
-//
-//        return code
     }
 
     private func generateFeatureActionsCode(for feature: Feature) -> String {
